@@ -1,0 +1,147 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+nav img {
+	align-items: center;
+	width: 200px;
+	height: auto;
+}
+
+nav ul a li {
+	list-style-type: none;
+}
+
+nav ul a {
+	color: white;
+	margin: 25px;
+	padding: 10px;
+	font-size: 30px;
+	background-color: rgb(171, 197, 142);
+	border-radius: 20px;
+	text-decoration: none;
+	align-items: center;
+	text-align: center;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul a:hover {
+	background-color: white;
+	color: rgb(171, 197, 142);
+}
+
+header nav {
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(171, 197, 142);
+}
+
+nav ul li {
+	padding: 0 20px;
+	margin: 0 20px;
+	display: inline-block;
+}
+
+footer {
+	background-color: var(--primary-color);
+	color: var(--white);
+	padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+	margin-bottom: 1.5rem;
+	font-size: 1.2rem;
+}
+
+.social-links {
+	display: flex;
+	gap: 1rem;
+}
+
+.social-links a {
+	color: var(--white);
+	font-size: 1.5rem;
+	transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+	color: var(--secondary-color);
+}
+
+.footer-bottom {
+	text-align: center;
+	padding-top: 2rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container-main img {
+	display: flex;
+	margin: auto;
+	width: 500px;
+}
+
+.container-main {
+	text-align: center;
+}
+
+.card {
+	margin: auto;
+	justify-content: center;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 300px;
+	padding: 15px;
+}
+
+.card h1 {
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.card .main-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 15px;
+}
+
+.card ul {
+	list-style: none;
+	padding: 0;
+	text-align: left;
+}
+
+.card ul li {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.card ul li strong {
+	margin-right: 5px;
+}
+
+.card .map-image {
+	width: 100%;
+	height: auto;
+	margin-top: 15px;
+	border-radius: 8px;
+}
