@@ -1,228 +1,178 @@
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --light-gray: #f5f6fa;
-    --white: #ffffff;
-}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+nav img {
+	align-items: center;
+	width: 180px;
+	height: auto;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 5%;
-    background-color: var(--white);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+nav ul a li {
+	list-style-type: none;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+nav ul a {
+	color: white;
+	margin: 10px;
+	padding: 5px;
+	font-size: 20px;
+	background-color: rgb(171, 197, 142);
+	border-radius: 20px;
+	text-decoration: none;
+	align-items: center;
+	text-align: center;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+nav ul a:hover {
+	background-color: white;
+	color: rgb(171, 197, 142);
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
+header nav {
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(171, 197, 142);
 }
 
-.nav-links a:hover {
-    color: var(--secondary-color);
+nav ul li {
+	padding: 0 20px;
+	margin: 0 20px;
+	display: inline-block;
 }
-
-.nav-logo {
-    width: 20Opx;
-    height: 100px;
-    margin-right: 5px;
-    vertical-align: middle;
-  }
 
 
 .container {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.carousel-inner {
+    margin: auto;
+    position: center;
+    height: 250px;
     display: flex;
-    width: 300%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
+    justify-content:center;
+    align-items: center;
 }
 
-.slide {
+.container span {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc
+    (var(--i) * (360deg / 50)));
+    animation: blink 3s linear
+    infinite;
+    animation-declay: calc(var(--i) *
+    (3s / 50));
+}
+
+blink { 
+    0%{
+        background: black;
+    }
+
+    25%{
+        background: rgb(136, 162, 106);
+    }
+}
+
+.login-box{
+    position: absolute;
+    width: 400px;
+}
+
+form{
     width: 100%;
-    height: 100%;
+    padding: 0 50px;
 }
 
-.slide img {
+h2{
+    font-size: 2em;
+    color: rgb(136, 162, 106);
+    text-align: center
+}
+
+.input-box {
+    position: relative;
+    margin: 25px 0;
+}
+
+input{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 50%;
+    background: transparent;
+    border: 2px solid rgb(136, 162, 106);
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+    transition: .5s ease;
 }
 
-.slogan {
+input.focus {
+    border-color: rgb(0, 0, 0);
+}
+
+label{
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 0.3);
-    padding: 2rem;
-    border-radius: 10px;
-    z-index: 2;
-}
-
-.carousel-controls button {
-    position: absolute;
-    top: 50%;
+    left: 20px;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.3);
-    border: none;
-    color: white;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-    z-index: 3;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+    transition: .5s ease;
 }
 
-#prev {
-    left: 1rem;
+input:focus~label{
+    top: 1px;
+    font-size: .8em;
+    background: rgb(136, 162, 106);
+    padding: 0 6px;
+    color: rgb(0, 0, 0);
 }
 
-#next {
-    right: 1rem;
+.forgot-pass{
+    margin: -15px 0 10px;
+    text-align: center;
 }
 
-.carousel-dots {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 3;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-}
-
-.dot.active {
-    background: white;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: var(--accent-color);
-    color: var(--white);
+.forgot-pass a{
+    font-size: .85em;
+    color: rgb(136, 162, 106);
     text-decoration: none;
-    border-radius: 50px;
+}
+
+.bnt{
+    width: 100%;
+    height: 45px;
+    background: rgb(245, 246, 247);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgba(171, 197, 142, 0.306);
     font-weight: 600;
-    transition: transform 0.3s ease;
 }
 
-.cta-button:hover {
-    transform: translateY(-3px);
-}
-
-/* Features Section */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 4rem 5%;
-    background-color: var(--light-gray);
-}
-
-.feature-card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
+.signup-link{
+    margin: 20px 0 10px;
     text-align: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
-}
-
-.feature-card i {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-}
-
-.feature-card h3 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-/* About Section */
-.about {
-    padding: 4rem 5%;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about h2 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.elegant-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #666;
+.signup-link a{
+    font-size: 1em;
+    color: rgb(171, 197, 142);
+    text-decoration: none;
+    font-weight: 600;
 }
 
 
